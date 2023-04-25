@@ -1,0 +1,10 @@
+grade1 = int(input('Введите оценку за 1 кр: '))
+grade2 = int(input('Введите оценку за 2 кр: '))
+grade3 = int(input('Введите оценку за 3 кр: '))
+grade4 = int(input('Введите оценку за 4 кр: '))
+grade5 = int(input('Введите оценку за 5 кр: '))
+
+sr_gr = (grade1+grade2+grade3+grade4+grade5)/5
+print(sr_gr)
+if sr_gr >= 8:
+  print('Поздравляем!)
