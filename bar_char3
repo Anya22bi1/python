@@ -1,0 +1,13 @@
+import pandas as pd
+import matplotlob as plt
+
+list1 = pd.read_excel('', sheet_name='2019')
+list1 = pd.read_excel('', sheet_name='2019')
+
+diag = pd.concat([list1, list2])
+x = ['Сен', 'Окт', 'Ноя', 'Дек', 'Янв']
+y = [diag['Сен'].mean(), diag['Окт'].mean(), diag['Ноя'].mean(), diag['Дек'].mean(), diag['Янв'].mean()]
+
+plt.pie(y, labels=x, autopct='%.1f')
+plt.title('Процент продаж')
+plt.show()
