@@ -1,0 +1,24 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as ax
+import pylab as pl
+
+list1 = pd.read_excel('', sheet_name='2019')
+list2 = pd.read_excel('', sheet_name='2020')
+
+month = ['Сен', 'Окт', 'Ноя', 'Дек', 'Янв']
+sales1 = [list1['Сен'].mean(), list1['Окт'].mean(), list1['Ноя'].mean(), list1['Дек'].mean(), list1['Янв'].mean()]
+sales2 = [list2['Сен'].mean(), list2['Окт'].mean(), list2['Ноя'].mean(), list2['Дек'].mean(), list2['Янв'].mean()]
+width = 0.4
+
+x = np.arange(len(month))
+print(x)
+fig, ax = pl.subplots()
+rects1 = ax.bar(x+width/2, sales1, width, label='2019г', color='k')
+rects2 = ax.bar(x+width/2, sales2, width, label='2020г', color='y')
+
+ax.set_title('Продажи, руб.')
+ax.set_xticks(x)
+ax.set_xticklabels(month)
+ax.legend()
+ax.show()
