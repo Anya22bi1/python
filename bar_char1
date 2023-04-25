@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+list1 = pd.read_excel('C:/Users/Анна/Desktop/питон/Диаграммы.xlsx', sheet_name='2019')
+list2 = pd.read_excel('C:/Users/Анна/Desktop/питон/Диаграммы.xlsx', sheet_name='2020')
+
+diag = pd.concat([list1, list2])
+
+x = ['Сен','Окт','Ноя','Дек','Янв']
+y = [diag['Сен'].sum(), diag['Окт'].sum(), diag['Ноя'].sum(), diag['Дек'].sum(), diag['Янв'].sum()]
+
+plt.xlabel('Месяц')
+plt.ylabel('Продажи')
+plt.legend()
+plt.plot(x, y, marker='o',color='g')
+
+plt.show()
