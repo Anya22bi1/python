@@ -1,0 +1,8 @@
+salary = int(input('Введите з/п: '))
+years_old = int(input('Введите стаж работы: '))
+if salary>30000 and years_old>=3:
+  print('Ссуда одобрена')
+elif salary>=30000 and years_old<3:
+  print('У вас не достаточно опыта работы')
+else:
+  print('Вы должны зарабатывать свыше 300000')
